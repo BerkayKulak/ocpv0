@@ -25,12 +25,12 @@ namespace OnlineCommercialAutomation.Controllers
             using (MemoryStream ms = new MemoryStream())
             {
                 QRCodeGenerator newcode = new QRCodeGenerator();
-                QRCodeGenerator.QRCode squarecode = newcode.CreateQrCode(code, QRCodeGenerator.ECCLevel.Q);
-                using (Bitmap picture= squarecode.GetGraphic(10))
-                {
-                    picture.Save(ms, ImageFormat.Png);
-                    ViewBag.squarecodeimage = "data:image/png;base64," + Convert.ToBase64String(ms.ToArray());
-                }
+                //QRCodeGenerator.QRCode squarecode = newcode.CreateQrCode(code, QRCodeGenerator.ECCLevel.Q);
+                //using (Bitmap picture= squarecode.GetGraphic(10))
+                //{
+                //    picture.Save(ms, ImageFormat.Png);
+                //    ViewBag.squarecodeimage = "data:image/png;base64," + Convert.ToBase64String(ms.ToArray());
+                //}
             }
             return View();
         }
